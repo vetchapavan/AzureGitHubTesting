@@ -22,9 +22,9 @@ steps:
 - script: |
     echo " running cucumber tests with specific tag "
     mvn clean test \
-      -Dcucumber.options="src/test/java/feature/webtesting.feature"
+      -Dcucumber.options="src/test/java/feature/placevalidations.feature"
       
-  displayName:  'CucumberTest'
+  displayName:  'AutomationTestCases'
       
 
     
