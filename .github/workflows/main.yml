@@ -23,10 +23,6 @@ jobs:
           ado_organization: prism-blue
           ado_project: Azure DevOps Evaluation
           ado_wit: Epic
-          ado_fields: |
-            System.Title=Automated Epic from GitHub
-            System.Description=Triggered by CI/CD pipeline
-            System.Tags=azure devops
           ado_new_state: "New"
           ado_active_state: "Active"
           ado_close_state: "Closed"
