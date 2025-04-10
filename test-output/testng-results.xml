@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2025-04-09T16:42:41 IST" name="Default suite" finished-at="2025-04-09T16:46:08 IST" duration-ms="206968">
+    <groups>
+    </groups>
+    <test started-at="2025-04-09T16:42:41 IST" name="Default test" finished-at="2025-04-09T16:46:08 IST" duration-ms="206968">
+      <class name="Runner.TestNgtestRunner">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:Runner.TestNgtestRunner@1ec9bd38]" started-at="2025-04-09T16:42:41 IST" name="setUpClass" test-instance-name="checking w3 user login page with Java" finished-at="2025-04-09T16:42:42 IST" duration-ms="1009" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@4e17442f]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpClass -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runner.TestNgtestRunner@1ec9bd38]" started-at="2025-04-09T16:42:42 IST" name="runScenario" data-provider="scenarios" test-instance-name="checking w3 user login page with Java" finished-at="2025-04-09T16:43:22 IST" duration-ms="40469" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["checking w3 user login page"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Checking functionalities of w3 schools page"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runner.TestNgtestRunner@1ec9bd38]" started-at="2025-04-09T16:43:22 IST" name="runScenario" data-provider="scenarios" test-instance-name="checking w3 user login page with Java" finished-at="2025-04-09T16:44:39 IST" duration-ms="76654" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["checking w3 user login page with css"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Checking functionalities of w3 schools page"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runner.TestNgtestRunner@1ec9bd38]" started-at="2025-04-09T16:44:39 IST" name="runScenario" data-provider="scenarios" test-instance-name="checking w3 user login page with Java" finished-at="2025-04-09T16:45:23 IST" duration-ms="43549" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["checking w3 user login page with python"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Checking functionalities of w3 schools page"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runner.TestNgtestRunner@1ec9bd38]" started-at="2025-04-09T16:45:23 IST" name="runScenario" data-provider="scenarios" test-instance-name="checking w3 user login page with Java" finished-at="2025-04-09T16:46:07 IST" duration-ms="44814" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["checking w3 user login page with Java"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Checking functionalities of w3 schools page"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:Runner.TestNgtestRunner@1ec9bd38]" started-at="2025-04-09T16:46:07 IST" name="tearDownClass" test-instance-name="checking w3 user login page with Java" finished-at="2025-04-09T16:46:08 IST" duration-ms="412" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownClass -->
+      </class> <!-- Runner.TestNgtestRunner -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

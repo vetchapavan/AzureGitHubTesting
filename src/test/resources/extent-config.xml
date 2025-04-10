@@ -1,0 +1,7 @@
+<configuration>
+    <theme>DARK</theme>
+    <encoding>UTF-8</encoding>
+    <protocol>https</protocol>
+    <timelineEnabled>true</timelineEnabled>
+    <documentTitle>Automation Test Report</documentTitle>
+</configuration>
