@@ -51,7 +51,7 @@ jobs:
       run: |
           curl -H  "Content-Type: text/xml" \
                -H "Authorization: Bearer $XRAY_TOKEN" \
-               --data @"./target/cucumber.json" \
+               --data @"./target/surefire-reports/testng-results.xml" \
                -X POST \
                "https://xray.cloud.getxray.app/api/v1/import/execution/testng?projectKey=TES"
     
