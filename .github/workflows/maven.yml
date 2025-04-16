@@ -49,7 +49,7 @@ jobs:
             echo "XRAY_TOKEN=$(echo $TOKEN | tr -d '"')" >> $GITHUB_ENV
     - name: Upload Test Results to Xray
       run: |
-          curl -H  "Content-Type: text/xml" \
+          curl -H  "Content-Type: application/json" \
                -H "Authorization: Bearer $XRAY_TOKEN" \
                --data @"./target/cucumber.json" \
                -X POST \
