@@ -51,7 +51,7 @@ jobs:
       run: |
           curl -H  "Content-Type: text/xml" \
                -H "Authorization: Bearer $XRAY_TOKEN" \
-               --data @"./target/surefire-reports/junitreports/TEST-Runner.TestNgtestRunner.xml" \
+               --data @"./target/cucumber.json" \
                -X POST \
-               "https://xray.cloud.getxray.app/api/v2/import/execution/junit?projectKey=TES"
+               "https://xray.cloud.getxray.app/api/v2/import/execution/cucumber?projectKey=TES"
     
