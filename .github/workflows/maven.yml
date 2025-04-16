@@ -40,6 +40,8 @@ jobs:
           name: test-output
           path: ./target
 
+    
+
     - name: Get Jira-xray api token
       id: xray-auth
       run: |
@@ -53,7 +55,7 @@ jobs:
                -H "Authorization: Bearer $XRAY_TOKEN" \
                --data @"./target/surefire-reports/testng-results.xml" \
                -X POST \
-               "https://xray.cloud.getxray.app/api/v2/import/execution/testng?projectKey=TES&testExecKey=TES-15"
+               "https://xray.cloud.getxray.app/api/v2/import/execution/testng?projectKey=TES"
      
 
     - name: Submit results to Xray
