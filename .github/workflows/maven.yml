@@ -43,7 +43,7 @@ jobs:
     - name: Submit results to Xray
       uses: mikepenz/xray-action@v2.4.5
       with:
-        client_id: ${{ secrets.XRAY_CLIENT_ID }}
+        username: ${{ secrets.XRAY_CLIENT_ID }}
         client_secret: ${{ secrets.XRAY_CLIENT_SECRET }}
         testFormat: "junit"
         testPaths: "**/surefire-reports/*.xml"
