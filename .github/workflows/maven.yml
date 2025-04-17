@@ -31,7 +31,7 @@ jobs:
       run: mkdir -p /home/runner/work/autdemo/autdemo/target
       
     - name: install maven
-      run: mvn test
+      run: mvn clean test -Dcucumber.options="--plugin json:target/cucumber-report.json"
         
 
     - name: Upload HTML report as Artifact
@@ -49,9 +49,9 @@ jobs:
             echo "XRAY_TOKEN=$(echo $TOKEN | tr -d '"')" >> $GITHUB_ENV
     - name: Upload Test Results to Xray
       run: |
-          curl -H  "Content-Type: text/xml" \
+          curl -H  "Content-Type: application/json" \
                -H "Authorization: Bearer $XRAY_TOKEN" \
-               --data @"./target/surefire-reports/testng-results.xml" \
+               --data @"./target/surefire-reports/cucumber-report.json" \
                -X POST \
-               "https://xray.cloud.getxray.app/api/v1/import/execution/testng?projectKey=TES"
+               "https://xray.cloud.getxray.app/api/v1/import/execution/cucumber?projectKey=TES"
     
