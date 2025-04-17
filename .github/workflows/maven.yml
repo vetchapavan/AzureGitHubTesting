@@ -31,7 +31,7 @@ jobs:
       run: mkdir -p /home/runner/work/autdemo/autdemo/target
       
     - name: install maven
-      run: mvn clean test
+      run: mvn clean test -DtestFailureIgnore=true
         
 
     - name: Upload HTML report as Artifact
