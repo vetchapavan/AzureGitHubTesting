@@ -1,0 +1,30 @@
+# This workflow will build a package using Maven and then publish it to GitHub packages when a release is created
+# For more information see: https://github.com/actions/setup-java/blob/main/docs/advanced-usage.md#apache-maven-with-a-settings-path
+
+name: Maven Package
+
+on:
+  issues:
+    types: [opened, edited, closed]
+
+jobs:
+  sync:
+
+    runs-on: ubuntu-latest
+  .
+    steps:
+    - name: Send isue to jira
+      run:  |
+        curl -u vetcha.pavan@capgemini.com:JIRAAPI \
+        -X POST \
+        -H "Content-Type: application/json" \
+        -d ' {
+                "fields": {
+                  "project": {"key": "TES"},
+                  "summary": "${{ github.event.issue.title }}",
+                  "description": ${{ github.issue.body }}",
+                  "issuetype": {"name": "Bug"}
+              }
+
+            }' \
+            https://capgemini-team-bkk7m5tj.atlassian.net/issues
