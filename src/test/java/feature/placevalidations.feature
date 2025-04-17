@@ -1,5 +1,5 @@
 Feature: Validate Place Validations Functionality
-  @regression
+  @regression @TEST_TES-35
   Scenario Outline: Verify if place is successfully added into the AddPlaceAPI
     Given Validate Add place API payload name "<name>" languauge "<language>" and phonenumber "<phonenumber>"
     When user call  "AddplaceApi" using "POST" http request method  
@@ -18,8 +18,9 @@ Feature: Validate Place Validations Functionality
     Then validate Api call is success status code is 200
     And "status" code is "OK"
     
-    
- 	@regression
+   	
+ 
+ 	@regression @TEST_TES-34
   Scenario Outline: Verify if get place is successfully fetch into the AddPlaceAPI
     Given Validate Add place API payload name "<name>" languauge "<language>" and phonenumber "<phonenumber>"
     When user call  "AddplaceApi" using "POST" http request method  
