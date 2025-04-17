@@ -33,7 +33,7 @@ public class Base1 {
 		System.out.println("chr1");
 		
 		WebDriverManager.chromedriver().setup();
-		driver = new ChromeDriver();
+		driver = new ChromeDriver(options);
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 	    driver.manage().window().maximize();
 	    driver.manage().deleteAllCookies();
