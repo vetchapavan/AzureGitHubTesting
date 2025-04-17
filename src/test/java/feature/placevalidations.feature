@@ -11,7 +11,7 @@ Feature: Validate Place Validations Functionality
    			| name | language | phonenumber |
    			| Pavan | Hindi | 9533745789|
    		
-  @regression
+  @regression @TEST_TES-38
   Scenario Outline: Verify if  delete place is successfully added into the AddPlaceAPI
     Given get the delete payload
     When user call  "DeleteplaceApi" using "POST" http request method  
