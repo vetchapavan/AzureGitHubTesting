@@ -1,30 +1,34 @@
-# This workflow will build a package using Maven and then publish it to GitHub packages when a release is created
-# For more information see: https://github.com/actions/setup-java/blob/main/docs/advanced-usage.md#apache-maven-with-a-settings-path
-
-name: Maven Package
+name: Sync GitHub Issues with Jira
 
 on:
   issues:
-    types: [opened, edited, closed]
+    types: [opened, edited]
 
 jobs:
-  sync:
-
+  sync_with_jira:
     runs-on: ubuntu-latest
-  
-    steps:
-    - name: Send isue to jira
-      run:  |
-        curl -u vetcha.pavan@capgemini.com:JIRAAPI \
-        -X POST \
-        -H "Content-Type: application/json" \
-        -d ' {
-                "fields": {
-                  "project": {"key": "TES"},
-                  "summary": "${{ github.event.issue.title }}",
-                  "description": ${{ github.issue.body }}",
-                  "issuetype": {"name": "Bug"}
-              }
 
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Create Jira issue
+      if: contains(github.event.issue.labels.*.name, 'bug')
+      run: |
+        curl -X POST -H "Content-Type: application/json" \
+        -H "Authorization: Basic ${{ secrets.JIRAAPI }}" \
+        -d '{
+              "fields": {
+                "project": {
+                  "key": "TES"
+                },
+                "summary": "${{ github.event.issue.title }}",
+                "description": "${{ github.event.issue.body }}",
+                "issuetype": {
+                  "name": "Bug"
+                }
+              }
             }' \
-            https://capgemini-team-bkk7m5tj.atlassian.net/issues
+        https://YOUR_JIRA_DOMAIN/rest/api/2/issue/
+      env:
+        JIRA_AUTH: ${{ secrets.JIRAAPI }}
