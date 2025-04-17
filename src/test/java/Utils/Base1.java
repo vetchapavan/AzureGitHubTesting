@@ -25,8 +25,8 @@ public class Base1 {
 	//String getdriver=prop.getProperty("driver");
 
 	{	
-		ChromeOptions options = new ChromeOptions();
-		WebDriverManager.chromedriver().setup();
+		//ChromeOptions options = new ChromeOptions();
+		//WebDriverManager.chromedriver().setup();
 		driver = new ChromeDriver();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 	    driver.manage().window().maximize();
