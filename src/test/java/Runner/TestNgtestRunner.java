@@ -37,7 +37,7 @@ import com.aventstack.extentreports.reporter.configuration.Theme;
 
 import junit.textui.TestRunner;
 		
-		@CucumberOptions(features="src/test/java/feature/webtesting.feature",glue="StepDefinitions",monochrome=true,plugin= {"json:target/cucumber.json","com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"})
+		@CucumberOptions(features="src/test/java/feature/placevalidations.feature",glue="StepDefinitions",monochrome=true,plugin= {"json:target/cucumber.json","com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"})
 
 		
 
