@@ -25,8 +25,14 @@ public class Base1 {
 	//String getdriver=prop.getProperty("driver");
 
 	{	
-		//ChromeOptions options = new ChromeOptions();
-		//WebDriverManager.chromedriver().setup();
+		ChromeOptions options = new ChromeOptions();
+		options.addArguments("--headless");
+		options.addArguments("--disable-gpu");
+		options.addArguments("--no-sandbox");
+		options.addArguments("--window-size=1920,1080");
+		System.out.println("chr1");
+		
+		WebDriverManager.chromedriver().setup();
 		driver = new ChromeDriver();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 	    driver.manage().window().maximize();
