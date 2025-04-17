@@ -29,6 +29,6 @@ jobs:
                 }
               }
             }' \
-        https://YOUR_JIRA_DOMAIN/rest/api/2/issue/
+        https://capgemini-team-bkk7m5tj.atlassian.net//rest/api/2/issue/
       env:
         JIRA_AUTH: ${{ secrets.JIRAAPI }}
