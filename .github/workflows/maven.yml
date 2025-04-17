@@ -46,5 +46,5 @@ jobs:
                -H "Authorization: Bearer $XRAY_TOKEN" \
                --data @"./target/cucumber.json" \
                -X POST \
-               "https://xray.cloud.getxray.app/api/v1/import/execution/cucumber?projectKey=TES&testExecKey=TES-39"
+               "https://xray.cloud.getxray.app/api/v1/import/execution/cucumber?projectKey=TES & testExecKey=TES-52"
     
