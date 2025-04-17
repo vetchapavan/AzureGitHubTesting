@@ -31,7 +31,7 @@ jobs:
       run: mkdir -p /home/runner/work/autdemo/autdemo/target
       
     - name: install maven
-      run: mvn clean test -Dcucumber.options="--plugin json:target/cucumber-report.json"
+      run: mvn clean test
         
 
     - name: Upload HTML report as Artifact
@@ -51,7 +51,7 @@ jobs:
       run: |
           curl -H  "Content-Type: application/json" \
                -H "Authorization: Bearer $XRAY_TOKEN" \
-               --data @"./target/surefire-reports/cucumber-report.json" \
+               --data @"./target/cucumber.json" \
                -X POST \
                "https://xray.cloud.getxray.app/api/v1/import/execution/cucumber?projectKey=TES"
     
