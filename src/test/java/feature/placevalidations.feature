@@ -16,7 +16,7 @@ Feature: Validate Place Validations Functionality
     Given get the delete payload
     When user call  "DeleteplaceApi" using "POST" http request method  
     Then validate Api call is success status code is 200
-    And "status" code is "OK"
+    And "status" code is "NotOK"
     
    	
  
