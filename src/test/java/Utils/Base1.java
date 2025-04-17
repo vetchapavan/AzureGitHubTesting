@@ -26,13 +26,8 @@ public class Base1 {
 
 	{	
 		ChromeOptions options = new ChromeOptions();
-		options.addArguments("--headless");
-		options.addArguments("--disable-gpu");
-		options.addArguments("--no-sandbox");
-		options.addArguments("--window-size=1920,1080");
-		System.out.println("chr1");
 		WebDriverManager.chromedriver().setup();
-		driver = new ChromeDriver(options);
+		driver = new ChromeDriver();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 	    driver.manage().window().maximize();
 	    driver.manage().deleteAllCookies();
