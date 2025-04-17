@@ -1,4 +1,4 @@
-name: Sync GitHub Issues with Jira
+name: Sync GitHub Issues with Jira-
 
 on:
   issues:
